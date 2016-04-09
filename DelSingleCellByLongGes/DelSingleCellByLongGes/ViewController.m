@@ -101,6 +101,7 @@
     return UITableViewCellEditingStyleDelete;
 }
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     NSLog(@"--------------------%ld",indexPath.row);
 }
 
@@ -114,6 +115,7 @@
     [UIView animateWithDuration:0.3 animations:^{
         self.edViewHeightCons.constant = 60;
     }];
+    //不需要
     //NSIndexPath *reloadIndexPath = [NSIndexPath indexPathForRow:self.pressedRow inSection:0];
     //[self.mTableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:reloadIndexPath] withRowAnimation:UITableViewRowAnimationNone];
 }
@@ -126,6 +128,7 @@
         [self hideEditView];
     }];
     UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        ////执行删除的操作,自行处理即可
         [self hideEditView];
     }];
     [alertController addAction:cancelAction];
