@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SNU-WT-TVP">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UR2-xU-suI">
+                                <rect key="frame" x="0.0" y="540" width="600" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVX-fv-sxD">
+                                        <rect key="frame" x="60" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="xpk-hg-Jjd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="确定">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="confirmDelete:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n0r-0F-C65"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rE9-8F-giW">
+                                        <rect key="frame" x="480" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="B6X-15-Xuz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="取消">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelDelete:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KkS-yg-EhJ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="DVX-fv-sxD" firstAttribute="leading" secondItem="UR2-xU-suI" secondAttribute="leading" constant="60" id="0jT-J6-oWJ"/>
+                                    <constraint firstItem="rE9-8F-giW" firstAttribute="top" secondItem="UR2-xU-suI" secondAttribute="top" id="5C9-dK-P7J"/>
+                                    <constraint firstAttribute="bottom" secondItem="DVX-fv-sxD" secondAttribute="bottom" id="HJt-2t-yCW"/>
+                                    <constraint firstItem="DVX-fv-sxD" firstAttribute="top" secondItem="UR2-xU-suI" secondAttribute="top" id="PDk-id-6iU"/>
+                                    <constraint firstAttribute="height" constant="60" id="U66-5J-0V2"/>
+                                    <constraint firstAttribute="bottom" secondItem="rE9-8F-giW" secondAttribute="bottom" id="kKq-14-rYL"/>
+                                    <constraint firstAttribute="trailing" secondItem="rE9-8F-giW" secondAttribute="trailing" constant="60" id="vir-ZH-yeW"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="UR2-xU-suI" secondAttribute="bottom" id="E0b-yY-JmP"/>
+                            <constraint firstItem="SNU-WT-TVP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="KNt-KE-tmo"/>
+                            <constraint firstItem="UR2-xU-suI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Qp3-S0-Jqx"/>
+                            <constraint firstAttribute="trailing" secondItem="SNU-WT-TVP" secondAttribute="trailing" id="R8j-Pj-kUp"/>
+                            <constraint firstItem="SNU-WT-TVP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="T3d-LZ-xcs"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SNU-WT-TVP" secondAttribute="bottom" id="q9I-4z-mZw"/>
+                            <constraint firstAttribute="trailing" secondItem="UR2-xU-suI" secondAttribute="trailing" id="qLw-4t-5i1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="edViewHeightCons" destination="U66-5J-0V2" id="yBF-fZ-icS"/>
+                        <outlet property="editView" destination="UR2-xU-suI" id="TRm-2z-tpT"/>
+                        <outlet property="mTableView" destination="SNU-WT-TVP" id="n2t-Mh-ZYJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
